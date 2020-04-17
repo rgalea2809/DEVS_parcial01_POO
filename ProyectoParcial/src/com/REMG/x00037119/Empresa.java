@@ -1,5 +1,6 @@
 package com.REMG.x00037119;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -10,6 +11,7 @@ public class Empresa {
 
     public Empresa(String nombre) {
         this.nombre = nombre;
+        planilla = new ArrayList<Empleado>();
     }
 
     public String getNombre() {

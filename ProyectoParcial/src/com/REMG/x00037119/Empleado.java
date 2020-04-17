@@ -1,5 +1,6 @@
 package com.REMG.x00037119;
 
+import java.util.ArrayList;
 import java.util.List;
 
 abstract class Empleado {
@@ -13,6 +14,7 @@ abstract class Empleado {
         this.nombre = nombre;
         this.puesto = puesto;
         this.salario = salario;
+        documentos = new ArrayList<Documento>();
     }
 
     public String getNombre() {

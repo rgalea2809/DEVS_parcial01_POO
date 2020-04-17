@@ -18,7 +18,7 @@ public class Main {
                     if (toContract == null){
                         break;
                     }
-                    empresa.planilla.add(toContract);
+                    empresa.addEmpleado(toContract);
                     JOptionPane.showMessageDialog(null, "Empleado ingresado exitosamente.");
                     break;
                 case 2:
@@ -143,7 +143,7 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Ocurrio un error al ingresar el numero telefonico, intentelo de nuevo!");
                     return null;
                 }
-                empleado = new ServicioProfesional(nombre, puesto, salario, extension);
+                empleado = new PlazaFIja(nombre, puesto, salario, extension);
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Error, intentelo de nuevo.");
