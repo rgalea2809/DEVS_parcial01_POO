@@ -2,7 +2,7 @@ package com.REMG.x00037119;
 
 import java.util.ArrayList;
 
-public class Empleado {
+abstract class Empleado {
 
     protected String nombre;
     protected String puesto;
