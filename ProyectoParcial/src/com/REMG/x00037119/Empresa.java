@@ -1,7 +1,7 @@
 package com.REMG.x00037119;
 
-
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Empresa {
 
@@ -16,7 +16,7 @@ public class Empresa {
         return nombre;
     }
 
-    public List<Empleado> getPlantilla() {
+    public List<Empleado> getPlanilla() {
         return planilla;
     }
 
@@ -24,14 +24,21 @@ public class Empresa {
         planilla.add(employ);
     }
 
-    public void quitEmpleado (String nombre){
-
+    public void quitEmpleado (String nombre) throws NotAnEmployeeException {
+        AtomicInteger cont = new AtomicInteger(0);
         planilla.forEach(empleado-> {
                     if( empleado.getNombre().equals(nombre) ){
                         planilla.remove(empleado);
+                        cont.set(1);
                     }
                 }
         );
+        int aux = cont.get();
+
+        if(aux != 1){
+            throw new NotAnEmployeeException("El nombre del empleado no se encuentra en la base de datos!");
+        }
+
     }
 
 }
