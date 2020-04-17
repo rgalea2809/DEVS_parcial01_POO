@@ -28,9 +28,10 @@ public class Empresa {
 
     public void quitEmpleado (String nombre) throws NotAnEmployeeException {
         AtomicInteger cont = new AtomicInteger(0);
+        AtomicInteger pos = new AtomicInteger(0);
         planilla.forEach(empleado-> {
                     if( empleado.getNombre().equals(nombre) ){
-                        planilla.remove(empleado);
+                        pos.set(planilla.indexOf(empleado));
                         cont.set(1);
                     }
                 }
@@ -40,6 +41,7 @@ public class Empresa {
         if(aux != 1){
             throw new NotAnEmployeeException("El nombre del empleado no se encuentra en la base de datos!");
         }
+        planilla.remove(pos.get());
 
     }
 

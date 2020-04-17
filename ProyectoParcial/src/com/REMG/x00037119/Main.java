@@ -52,6 +52,7 @@ public class Main {
                 case 6:
                     JOptionPane.showMessageDialog(null, "Adios...");
                     on = false;
+                    break;
                 default:
                     JOptionPane.showMessageDialog(null, "Ocurrio un error; Intentelo de nuevo!");
             }
@@ -72,6 +73,7 @@ public class Main {
             if(x <1 || x> 6){
                 throw new IntegerOutOfBoundsException("Ingreso un numero Invalido!");
             }
+
         }
         catch (IntegerOutOfBoundsException ex){
             System.out.println(ex.getMessage());
@@ -79,8 +81,9 @@ public class Main {
             return 0;
         }
         catch (Exception ex){
-            System.out.println(ex.getMessage());
-            JOptionPane.showMessageDialog(null, "Ocurrió un error! Intentelo de nuevo.");
+                System.out.println(ex.getMessage());
+                JOptionPane.showMessageDialog(null, "Ocurrió un error! Intentelo de nuevo.");
+
             return 0;
         }
         return x;
