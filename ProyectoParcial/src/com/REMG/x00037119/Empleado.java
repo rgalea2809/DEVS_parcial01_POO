@@ -1,6 +1,6 @@
 package com.REMG.x00037119;
 
-import java.util.ArrayList;
+import java.util.List;
 
 abstract class Empleado {
 
@@ -13,7 +13,6 @@ abstract class Empleado {
         this.nombre = nombre;
         this.puesto = puesto;
         this.salario = salario;
-        List<documento> documentos = new ArrayList<Documento>();
     }
 
     public String getNombre() {
@@ -36,8 +35,7 @@ abstract class Empleado {
 
         documentos.forEach(doc -> {
             if( doc.getNombre().equals(nombre) ){
-                int pos = documentos.indexOf(doc);
-                documentos.remove(pos );
+                documentos.remove(doc);
             }
         }
         );
