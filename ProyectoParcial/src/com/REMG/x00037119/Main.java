@@ -1,5 +1,6 @@
 package com.REMG.x00037119;
-
+// PARCIAL 01 POO CICLO 01/ 2020
+//Gabriela Solorzano 001815 | Rodrigo Mejia 00037119
 import javax.swing.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
