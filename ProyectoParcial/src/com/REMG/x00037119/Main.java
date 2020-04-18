@@ -55,7 +55,7 @@ public class Main {
                     on = false;
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Ocurrio un error; Intentelo de nuevo!");
+                   break;
             }
 
         }while(on);
